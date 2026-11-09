@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <rect width="960" height="540" fill="#F4F7F0"/>
+  <rect x="24" y="20" width="912" height="52" rx="12" fill="#4B7A28"/>
+  <text x="480" y="52" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="bold">
+    CodePiston Marrakesh — System &amp; Data Pipeline Architecture (VS Code Diagram)
+  </text>
+  <!-- Layer 1 -->
+  <rect x="24" y="92" width="205" height="420" rx="12" fill="#FFFFFF" stroke="#4B7A28" stroke-width="2"/>
+  <text x="126" y="122" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="14" font-weight="bold">1. Data Sources</text>
+  <rect x="40" y="145" width="173" height="50" rx="8" fill="#E9EFE2" stroke="#4B7A28"/>
+  <text x="126" y="175" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="12" font-weight="bold">Stagiaires.ma (258)</text>
+  <rect x="40" y="210" width="173" height="50" rx="8" fill="#E9EFE2" stroke="#4B7A28"/>
+  <text x="126" y="240" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="12" font-weight="bold">Trabajo.org MA (418)</text>
+  <rect x="40" y="275" width="173" height="50" rx="8" fill="#E9EFE2" stroke="#4B7A28"/>
+  <text x="126" y="305" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="12" font-weight="bold">LinkedIn &amp; Indeed MA</text>
+  <rect x="40" y="340" width="173" height="50" rx="8" fill="#E9EFE2" stroke="#7A4422"/>
+  <text x="126" y="370" text-anchor="middle" fill="#7A4422" font-family="Inter, Arial" font-size="12" font-weight="bold">Google Places API</text>
+  <rect x="40" y="405" width="173" height="50" rx="8" fill="#E9EFE2" stroke="#7A4422"/>
+  <text x="126" y="435" text-anchor="middle" fill="#7A4422" font-family="Inter, Arial" font-size="12" font-weight="bold">Cloud Talent API</text>
+
+  <!-- Layer 2 -->
+  <rect x="259" y="92" width="215" height="420" rx="12" fill="#FFFFFF" stroke="#4B7A28" stroke-width="2"/>
+  <text x="366" y="122" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="14" font-weight="bold">2. Python ETL Pipeline</text>
+  <rect x="275" y="155" width="183" height="70" rx="8" fill="#EDF3E6" stroke="#4B7A28"/>
+  <text x="366" y="185" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="12" font-weight="bold">Async Collectors</text>
+  <text x="366" y="205" text-anchor="middle" fill="#3B4D30" font-family="Inter, Arial" font-size="11">httpx + BS4 + Playwright</text>
+  <rect x="275" y="250" width="183" height="80" rx="8" fill="#EDF3E6" stroke="#4B7A28"/>
+  <text x="366" y="280" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="12" font-weight="bold">MarrakechJobCleaner</text>
+  <text x="366" y="300" text-anchor="middle" fill="#3B4D30" font-family="Inter, Arial" font-size="11">SHA-256 Dedup · MAD Parser</text>
+  <rect x="275" y="355" width="183" height="80" rx="8" fill="#FDF8F3" stroke="#7A4422"/>
+  <text x="366" y="385" text-anchor="middle" fill="#7A4422" font-family="Inter, Arial" font-size="12" font-weight="bold">Excel Audit Output</text>
+  <text x="366" y="405" text-anchor="middle" fill="#7A4422" font-family="Inter, Arial" font-size="11">20 Raw -&gt; 16 Cleaned (.xlsx)</text>
+
+  <!-- Layer 3 -->
+  <rect x="504" y="92" width="205" height="420" rx="12" fill="#FFFFFF" stroke="#7A4422" stroke-width="2"/>
+  <text x="606" y="122" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="14" font-weight="bold">3. FastAPI &amp; Gemini AI</text>
+  <rect x="520" y="155" width="173" height="75" rx="8" fill="#FDF8F3" stroke="#7A4422"/>
+  <text x="606" y="185" text-anchor="middle" fill="#7A4422" font-family="Inter, Arial" font-size="12" font-weight="bold">FastAPI REST Server</text>
+  <text x="606" y="205" text-anchor="middle" fill="#3B4D30" font-family="Inter, Arial" font-size="11">/jobs · /kanban · /logs</text>
+  <rect x="520" y="255" width="173" height="80" rx="8" fill="#EDF3E6" stroke="#4B7A28"/>
+  <text x="606" y="285" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="12" font-weight="bold">Gemini 2.5 Flash AI</text>
+  <text x="606" y="305" text-anchor="middle" fill="#3B4D30" font-family="Inter, Arial" font-size="11">CV Score + FR/EN Letters</text>
+  <rect x="520" y="360" width="173" height="75" rx="8" fill="#EDF3E6" stroke="#4B7A28"/>
+  <text x="606" y="390" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="12" font-weight="bold">Supabase pgvector</text>
+  <text x="606" y="410" text-anchor="middle" fill="#3B4D30" font-family="Inter, Arial" font-size="11">Jobs, Kanban &amp; User Logs</text>
+
+  <!-- Layer 4 -->
+  <rect x="739" y="92" width="197" height="420" rx="12" fill="#FFFFFF" stroke="#4B7A28" stroke-width="2"/>
+  <text x="837" y="122" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="14" font-weight="bold">4. CodePiston UI (FR/EN)</text>
+  <rect x="755" y="150" width="165" height="60" rx="8" fill="#E9EFE2" stroke="#4B7A28"/>
+  <text x="837" y="185" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="12" font-weight="bold">Marrakesh District Map</text>
+  <rect x="755" y="225" width="165" height="60" rx="8" fill="#E9EFE2" stroke="#4B7A28"/>
+  <text x="837" y="260" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="12" font-weight="bold">5-Col Kanban Tracker</text>
+  <rect x="755" y="300" width="165" height="60" rx="8" fill="#E9EFE2" stroke="#4B7A28"/>
+  <text x="837" y="335" text-anchor="middle" fill="#162010" font-family="Inter, Arial" font-size="12" font-weight="bold">AI CV Matchmaker</text>
+  <rect x="755" y="375" width="165" height="60" rx="8" fill="#FDF8F3" stroke="#7A4422"/>
+  <text x="837" y="410" text-anchor="middle" fill="#7A4422" font-family="Inter, Arial" font-size="12" font-weight="bold">User Session &amp; Audit Logs</text>
+</svg>
